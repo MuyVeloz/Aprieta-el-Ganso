@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, Sans-serif;
+  background: linear-gradient(to bottom, #00bfff, #0077b3);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#startButton {
+  background-color: #006bb3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+#startButton:hover {
+  background-color: #005699;
+
+}
+
+#scoreDisplay {
+
+  font-size: 32px;
+  margin: 20px 0;
+
+}
+
+#timerDisplay {
+  font-size: 24px;
+  margin-bottom: 20px;
+
+
+}
+
+#gameBoard {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 20px;
+  margin-top:30px;
+}
+
+.hole {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #005699;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+
+
+}
+
+.hole img {
+width: 55%;
+height: 55%;
+object-fit: cover;
+transition: transform 0.2s ease-in-out;
+border-radius: 50%;
+transform: scale(0);
+cursor: pointer;
+}
+
+.hole.active img {
+  transform: scale(1.1);
+}
+
+.hole img.clicked {
+  border: 4px solid tomato;
+}
